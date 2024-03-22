@@ -48,7 +48,7 @@ def _get_quote(ticker, date):
         'base': base,
         'symbol': symbol,
     }
-    response = requests.get(url='https://api.exchangerate.host/' + date, params=params)
+    response = requests.get(url='https://api.frankfurter.app/' + date, params=params)
 
     if response.status_code != requests.codes.ok:
         raise RatesApiError("Invalid response ({}): {}".format(response.status_code,
